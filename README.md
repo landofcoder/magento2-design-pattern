@@ -66,7 +66,7 @@ The use of the pattern by Magento
 
 The classes that inherit after Mage_Core_Model_Abstract class have access to load(), save() and delete() methods that allow loading, modification, creating or deleting records in a table that the class is connected with. Additionally, Mage_Core_Model_Abstract class inherits from Varien_Object, which gives us access to truly magical methods __set() and __get() that are responsible for automatic mapping of columns in a database table with the properties of a given object.
 
-### Part 14: SERVICE CONTRACT DESIGN PATTERN
+### Part 14: Service Contract Design Pattern
 
 Magento is an extension based or modular system, which allows a third-party developer to customize and overwrite core parts of its framework. These customizations may lead to several issues, for example, it will become for developers to keep track of customization done by external extensions. Thus to overcome this Magento comes up with a service contract pattern. A service contract is a set of interfaces that act as a layer between an end-user and business layer. Thus rather than directly exposing business logic for customization to end-user, a layer called service contract comes in between.
 
@@ -74,33 +74,33 @@ Service contracts enhance the modularity of Magento. Helps merchants for easy up
 
 Read More: https://devdocs.magento.com/guides/v2.4/extension-dev-guide/service-contracts/design-patterns.html
 
-### Part 15: OBJECT MANAGER
+### Part 15: Object Manager
 
 It itself consists of various pattern such as - Dependency injection, Singleton, Factory, Abstract Factory, Composite, strategy, CQRS, Decorator and many more. We will discuss some most used patterns among these. Object manager has a very big role to play, Magento prohibits the direct use of it. The object manager is responsible for implementing factory, singleton and proxy patterns. It automatically instantiates parameters in class constructors. Before moving future lets understand injectable and non-injectable objects:-
 
 Read More: https://devdocs.magento.com/guides/v2.4/extension-dev-guide/object-manager.html
 
-### Part 16: INJECTABLE OBJECTS
+### Part 16: Injectable Objects
 
 They do not have their own identity such as EventManager, CustomerAccountManagementService.
 
-### Part 17: NON-INJECTABLE OBJECTS
+### Part 17: Non-Injectable Objects
 
 Such as customer, product etc. These entities usually have their identities and state, since they have their identities it is important to know on which exact instance of entity we have to work.
 
-### Part 18: DEPENDENCY INJECTION
+### Part 18: Dependency Injection
 
 It is an alternative to Mage in Magento 1. It is a concept of injecting the dependent object through the external environment rather than creating them internally. Thus we will be asking for resources when our object is being created instead of creating resources when needed. This helps in future modification and testing becomes very easy by mocking required objects.
 
 Read More: https://devdocs.magento.com/guides/v2.4/extension-dev-guide/depend-inj.html
 
-### Part 19: FACTORY PATTERN OR FACTORY CLASSES:
+### Part 19: Factory Pattern Or Factory Classes:
 
 In Magento 2 Factory classes create a layer between the object manager and business code. Factory classes need not define explicitly as they are auto-generated. We should create factory classes for non-injectable objects.
 
 Read More: https://devdocs.magento.com/guides/v2.4/extension-dev-guide/factories.html
 
-### Part 20: PROXY PATTERN
+### Part 20: Proxy Pattern
 
 Proxy classes are used to work in place of another class and in Magento 2 they are sometimes used in place of resource hungry classes. To understand what proxy classes do let’s see the reason which leads to the occurrence of proxy classes. As we know Magento uses constructor injection for object creation and when we instantiate an object all the classes in its constructor will also instantiate thus leading to a chain of instantiation via a constructor, this can really slow down the process and impact the performance of an application, so to stop chain instantiation Magento uses proxy classes.
 
