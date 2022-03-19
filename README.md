@@ -4,9 +4,9 @@ Magento 2 introduces a couple of interesting design patterns and solutions that 
 
 Design pattern is perfectly fine, because they are to help with solving common problems as seen fit, instead of deploying verbatim implementations.
 
-=======
-References: https://symphisys.com/blog-patterns
-=======
+
+>> References: https://symphisys.com/blog-patterns
+
 
 ## There are lots of design patterns available in Magento.
 
@@ -175,9 +175,6 @@ In web applications, such as Magento, routing is the act of providing data from 
 Read More: https://devdocs.magento.com/guides/v2.4/extension-dev-guide/routing.html
 
 
-=======
+>> References: https://magento.stackexchange.com/questions/234961/how-many-design-patterns-does-magento-have
 
-References: https://magento.stackexchange.com/questions/234961/how-many-design-patterns-does-magento-have
-
-=======
 Thanks you for reading!
