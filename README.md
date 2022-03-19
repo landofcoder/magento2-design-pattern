@@ -64,7 +64,7 @@ Objects are a representation of a row in the database table. These objects shoul
 
 The use of the pattern by Magento
 
-The classes that inherit after Mage_Core_Model_Abstract class have access to load(), save() and delete() methods that allow loading, modification, creating or deleting records in a table that the class is connected with. Additionally, Mage_Core_Model_Abstract class inherits from Varien_Object, which gives us access to truly magical methods __set() and __get() that are responsible for automatic mapping of columns in a database table with the properties of a given object.
+The classes that inherit after \Magento\Framework\Model\AbstractModel class have access to load(), save() and delete() methods that allow loading, modification, creating or deleting records in a table that the class is connected with. Additionally, \Magento\Framework\Model\AbstractModel class inherits from \Magento\Framework\DataObject, which gives us access to truly magical methods setData() and getData() that are responsible for automatic mapping of columns in a database table with the properties of a given object.
 
 ### Part 14: Service Contract Design Pattern
 
