@@ -120,11 +120,11 @@ So in above code, we are using proxy classes for catalogProductStatus and produc
 
 Magento creates proxy classes on the fly using di.xml with some fixed conventions, thus replacing the original object with a proxy class object. Now let us look at our proxy class to understand how it is working
 
-    ``Some common convention Magento follow while creation of proxy:-``
+``Some common convention Magento follow while creation of proxy:-``
 
-    - Namespace of proxy class will be same as original (``Magento\Catalog\Model\Product\Attribute\Source\Status``)
-    - Proxy class only extends one object i.e, object manager
-    - Has magic functions such as __sleep, __wake which are invoked only on certain action and function such as __clone will make an object of original class and will provide the object only when it is needed (making use of lazy loading design pattern), thus improving the performance of application https://devdocs.magento.com/guides/v2.0/extension-dev-guide/proxies.html
+- Namespace of proxy class will be same as original (``Magento\Catalog\Model\Product\Attribute\Source\Status``)
+- Proxy class only extends one object i.e, object manager
+- Has magic functions such as __sleep, __wake which are invoked only on certain action and function such as __clone will make an object of original class and will provide the object only when it is needed (making use of lazy loading design pattern), thus improving the performance of application https://devdocs.magento.com/guides/v2.0/extension-dev-guide/proxies.html
 
 ### Plugins (Interceptors)
 
@@ -139,15 +139,14 @@ This interception approach reduces conflicts among extensions that change the be
 #### Limitations
 
 Plugins cannot be used with any of the following:
-
-    - Final methods
-    - Final classes
-    - Non-public methods
-    - Static methods
-    - __construct
-    - Virtual types
-    - Objects that are instantiated before Magento\Framework\Interception is bootstrapped
-    - Objects that are not instantiated by the ObjectManager (e.g. by using new directly). https://devdocs.magento.com/guides/v2.0/extension-dev-guide/plugins.html
+- Final methods
+- Final classes
+- Non-public methods
+- Static methods
+- __construct
+- Virtual types
+- Objects that are instantiated before Magento\Framework\Interception is bootstrapped
+- Objects that are not instantiated by the ObjectManager (e.g. by using new directly). https://devdocs.magento.com/guides/v2.0/extension-dev-guide/plugins.html
 
 ### ObjectManager
 
